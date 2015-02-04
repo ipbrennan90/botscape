@@ -1,0 +1,15 @@
+<%= form_for @botscaper do |b| %>
+<%= b.label :name %>
+<%= b.text_field :name %>
+</br>
+<%= b.label :user %>
+<%= b.text_field :user %>
+</br>
+<%= b.label :email %>
+<%= b.text_field :email %>
+</br>
+<%= b.label :password %>
+<%= b.password_field :password %>
+</br>
+<%=b.submit "Create User"  %>
+<%end%>
