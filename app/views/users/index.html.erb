@@ -1,7 +1,7 @@
-<% @botscapers.each do |i| %>
-<div>
+<%= form_for @botscapers, class: "form-horizontal" do |i| %>
+
   <%= i.name %>
   <%= i.user %>
   <%= i.email %>
-</div>
+
 <%end%>
