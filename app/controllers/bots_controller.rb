@@ -3,5 +3,6 @@ class BotsController < ApplicationController
   end
 
   def bot_1
-    
+  end
+
 end
