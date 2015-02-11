@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'bcrypt', '~> 3.1.7'
+
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'rails_12factor', '~> 0.0.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
