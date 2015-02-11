@@ -4,15 +4,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user= User.find_by_name(params[:email])
+    user= User.find_by_email(params[:email])
+    binding.pry
     if user && user.authenticate(params[:password])
-      session[:user_id]
-      redirect_to root_url, notice: "Logged in!"
+      session[:user_id] = user.id
+      redirect_to root_path, notice: "Logged in!"
+    else
+      render :new
     end
   end
 
   def destroy
     session[:user_id]=nil
-    redirect_to root_url, notice: "logged out"
+    redirect_to root_path, notice: "logged out"
   end
 end
